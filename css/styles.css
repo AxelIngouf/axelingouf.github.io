@@ -3,14 +3,13 @@
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
-	background-image: "img/background.gif";
 }
 
 body
 {
-	background-color: rgb(68, 74, 77);
 	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
 	color: rgb(223, 211, 211);
+	background-image: url(../img/background.gif);
 }
 
 h2
@@ -36,11 +35,14 @@ h2
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom:40px;
+	margin-top:20px;
 	overflow: auto;
 
+	border-radius: 5px;
+
 	padding: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+	background-color: rgb(68, 74, 77);
 }
 
 .presentation h1
@@ -55,10 +57,10 @@ h2
 	overflow: hidden;
 	width: 30%;
 	background-color: #000;
-	box-shadow: 10px 10px rgba(0, 0, 0, 0.19);
+	box-shadow: 10px 10px #00000030;
 
-	border-bottom: solid 5px rgb(102, 102, 102);
-	border-right: solid 5px rgb(36, 34, 34);
+	border-bottom: solid 5px #666666;
+	border-right: solid 5px #222222;
 	
 	border-bottom-left-radius:5px;
 	border-top-right-radius:5px;
@@ -75,10 +77,10 @@ h2
 
 #projects .item:hover {
 	transform:translate(5px, 5px);
-	box-shadow: 4.5px 4.5px rgba(0, 0, 0, 0.19);
+	box-shadow: 4.5px 4.5px #00000030;
 	transition:all 0.2s;
-	border-bottom: solid 5px lawngreen;
-	border-right: solid 5px green;
+	border-bottom: solid 5px #7cfc00;
+	border-right: solid 5px #008000;
 }
 
 #projects .item .dynamic {	
@@ -101,7 +103,7 @@ h2
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: #00000066;
 	opacity: 1;
 	text-align: center;
 	transition: all 0.3s;
@@ -125,7 +127,7 @@ h2
 
 ul li
 {
-	background-color: rgb(29, 32, 33);
+	background-color: #1d2021;
 }
 
 ul #impair
