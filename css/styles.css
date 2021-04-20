@@ -1,3 +1,11 @@
+* 
+{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	background-image: "img/background.gif";
+}
+
 body
 {
 	background-color: rgb(68, 74, 77);
@@ -10,12 +18,29 @@ h2
 	text-align: center;
 }
 
+.me
+{
+	text-align: center;
+	background-color: #131516;
+	padding: 20px;
+}
+.me h1
+{
+	padding-bottom: 20px;
+}
+
 /* containers */
 .container
 {
-	width: 70%;
-	padding-left: 15%;
-	padding-bottom: 50px;
+	width:70%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:40px;
+	overflow: auto;
+
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .presentation h1
@@ -24,15 +49,19 @@ h2
 }
 
 #projects .item {
+	margin:1.5%;
 	position: relative;
+	display: inline-block;
 	overflow: hidden;
 	width: 30%;
 	background-color: #000;
-}
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.19);
 
-#projects .impair
-{
-	float: right;
+	border-bottom: solid 5px rgb(102, 102, 102);
+	border-right: solid 5px rgb(36, 34, 34);
+	
+	border-bottom-left-radius:5px;
+	border-top-right-radius:5px;
 }
 
 #projects .item img {
@@ -44,11 +73,12 @@ h2
 	display: inline-block;
 }
 
-#projects .item:hover img {
-	-moz-transform: scale(0.95);
-	-webkit-transform: scale(0.95);
-	transform: scale(0.95);
-	transition:all 1s;
+#projects .item:hover {
+	transform:translate(5px, 5px);
+	box-shadow: 4.5px 4.5px rgba(0, 0, 0, 0.19);
+	transition:all 0.2s;
+	border-bottom: solid 5px lawngreen;
+	border-right: solid 5px green;
 }
 
 #projects .item .dynamic {	
@@ -60,9 +90,6 @@ h2
 }
 
 #projects .item:hover .dynamic {
-	-moz-transform: scale(0.95);
-	-webkit-transform: scale(0.95);
-	transform: scale(0.95);
 	display: inline;
 	z-index:1;
 }
