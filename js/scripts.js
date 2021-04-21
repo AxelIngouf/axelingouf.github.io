@@ -1,5 +1,6 @@
 
 var clickedItem = false;
+var selectedItem = -1;
 
 $(document).on('click', window, function() {
 
@@ -7,6 +8,7 @@ $(document).on('click', window, function() {
   {
     $('.selected').css("display", "none");
     $('.selected').removeClass("selected");
+    selectedItem = -1;
   }
   else
   {
@@ -16,18 +18,27 @@ $(document).on('click', window, function() {
 
 $('.item').on('click', function()
 {
-
   $('.selected').css("display", "none");
   $('.selected').removeClass("selected");
 
   var i = ($(this).index() - 1) / 2;
-  
-  var description = $('.project-description').eq(i);
-  
-  description.css("display", "block");
-  description.addClass("selected");
 
-  clickedItem = true;
+  if(i != selectedItem)
+  {
+    var description = $('.project-description').eq(i);
+
+    description.css("display", "block");
+    description.addClass("selected");
+  
+    clickedItem = true;
+
+    selectedItem = i;
+  }
+  else
+  {
+    selectedItem = -1;
+    clickedItem = false;
+  }
 });
 
 
