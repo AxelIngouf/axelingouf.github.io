@@ -3,7 +3,8 @@ var clickedItem = false;
 var selectedItem = -1;
 
 $('.description-content').on('click', '.quit-button', function() {
-  $('.selected').fadeOut();
+  $('.selected').fadeOut("fast");
+  $('iframe').attr('src', $('iframe').attr('src'));
   $('.selected').removeClass("selected");
   deleteQuitButton();
   clickedItem = false;
@@ -15,8 +16,9 @@ $(document).on('click', window, function() {
 
   if(clickedItem == false)
   {
-    $('.selected').fadeOut();
+    $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
+    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
     selectedItem = -1;
   }
@@ -33,14 +35,15 @@ $('.item').on('click', function()
 
   if(i != selectedItem)
   {
-    $('.selected').css("display", "none");
+    $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
+    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
 
     var description = $('.project-description').eq(i);
 
-    description.fadeIn();
-    description.css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 'slow');
+    description.fadeIn("fast");
+    description.css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 'fast');
     description.addClass("selected");
     addQuitButton();
   
@@ -50,8 +53,9 @@ $('.item').on('click', function()
   }
   else
   {
-    $('.selected').fadeOut();
+    $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
+    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
 
     selectedItem = -1;
