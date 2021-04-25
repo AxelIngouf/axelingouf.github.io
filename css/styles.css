@@ -66,6 +66,20 @@ a:hover
 	text-align: center;
 }
 
+.skills .skills-overview
+{
+	float:left;
+	padding-top : 50px;
+	padding-left : 5%;
+	margin-right: 5%;
+	width:45%;
+}
+
+.skills h2
+{
+	padding-bottom: 15px;
+}
+
 #projects .item {
 	margin:1.5%;
 	position: relative;
@@ -178,7 +192,7 @@ a:hover
 	text-decoration: none;
 	margin:20px 10px;
 	padding:10px 5px;
-	background-color: greenyellow;
+	background-color: rgb(128, 190, 35);
 	color:black;
 	font-size: 20px;
 	border-radius: 5px;
@@ -191,6 +205,17 @@ a:hover
 {
 	background-color: green;
 	transform:translate(3px, 3px);
+	color:#000000;
+}
+
+#source-code
+{
+	background-color: rgb(184, 184, 1);
+}
+
+#source-code:hover
+{
+	background-color: rgb(110, 110, 0);
 }
 
 .quit-button
@@ -225,11 +250,6 @@ a:hover
 {
 	text-align: center;
 	font-weight: 100;
-}
-
-ul li
-{
-	background-color: #1d2021;
 }
 
 ul #impair
