@@ -198,6 +198,7 @@ a:hover
 
 	font-family: joystixmonospace !important;
 	font-size:12px !important;
+	line-height: 18px;
 }
 
 .project-description .description-content iframe
@@ -280,6 +281,16 @@ a:hover
 	background-color: green;
 	box-shadow: 0 4px 8px 0 #066d0fe3, 0 6px 20px 0 #15ff0040;
 	transform:translate(2px, 2px);
+}
+
+.specs
+{
+	font-size: 10px;
+	margin:25px 25px 0px 25px;
+}
+.specs li
+{
+	margin-bottom:5px;
 }
 
 .title

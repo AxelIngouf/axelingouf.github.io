@@ -1,3 +1,11 @@
+/* Projects duration and team size init */
+
+$(".description-content").each(function()
+{
+  $(this).append("<div class=\"specs\"><ul><li>Team Size: " + $(this).attr("team-size") + "</li><li>Duration: "+ $(this).attr("duration") +"</li></div>");
+})
+
+/* Projects content display runtime */
 
 var clickedItem = false;
 var selectedItem = -1;
