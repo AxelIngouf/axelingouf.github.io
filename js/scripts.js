@@ -2,7 +2,14 @@
 
 $(".description-content").each(function()
 {
-  $(this).append("<div class=\"specs\"><ul><li>Team Size: " + $(this).attr("team-size") + "</li><li>Duration: "+ $(this).attr("duration") +"</li></div>");
+  var string = "<div class=\"specs\"><ul>";
+    $.each(this.attributes, function() {
+      if(this.specified && this.name != "class" && this.name != "id") {
+        string += "<li>"+this.name+": "+this.value+"</li>";
+      }
+    });
+
+   $(this).append(string + "</ul></div>");
 })
 
 /* Projects content display runtime */
