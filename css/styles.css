@@ -58,6 +58,58 @@ a:hover
 	padding-bottom: 20px;
 }
 
+.me div
+{
+	display: inline-block;
+}
+
+.me .name
+{
+	transform: scaleX(1);
+	transition: all 0.6s;
+}
+
+.me:hover .name
+{
+	animation:linear;
+	transform: scaleX(0);
+
+	transition: all 0.6s;
+}
+
+.me .a, .me .i
+{
+	transition: all 0.5s;
+}
+
+.me:hover .a
+{
+	transform: translateX(70px);
+	transition: all 1s;
+}
+
+.me:hover .i
+{
+	transform: translateX(30px);
+	transition: all 1s;
+}
+
+.me h2
+{
+	transition: all 0.6s;
+}
+
+.me:hover h2
+{
+	transform: translateY(-15px);
+	transition: all 0.6s;
+}
+
+.me:hover .student
+{
+	display: none;
+}
+
 .contact a
 {
 	font-size: 20px;
@@ -352,6 +404,12 @@ footer a
 	.description-content
 	{
 		width:90% !important;
+	}
+
+	.skills .skills-overview
+	{
+		float:none;
+		width:100%;
 	}
 }
 
