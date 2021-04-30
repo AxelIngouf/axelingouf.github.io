@@ -11,7 +11,7 @@
          url('../fonts/6809_chargen-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+	font-display: swap;
 }
 
 @font-face {
@@ -19,6 +19,7 @@
     src: url('../fonts/joystix\ monospace.ttf');
     font-weight: normal;
     font-style: normal;
+	font-display: swap;
 }
 
 body
@@ -170,6 +171,7 @@ a:hover
 
 #projects .item img, #projects .item video {
 	max-width: 100%;
+	height:auto;
 	margin: 0;
 	margin-bottom: -5px;
 	transition:all 0.2s;
