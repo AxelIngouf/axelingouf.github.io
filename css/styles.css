@@ -107,6 +107,7 @@ a:hover
 /* containers */
 .container
 {
+	font-size: 17px;
 	width:70%;
 	display:block;
 	margin-left: auto;
@@ -282,7 +283,6 @@ a:hover
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 15px;
 	border-radius: 10px;
 	border:solid 5px rgb(90, 90, 90);
 
