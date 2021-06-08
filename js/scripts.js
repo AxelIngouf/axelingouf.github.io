@@ -96,3 +96,13 @@ $('.description-content').on('click', function()
 {
   clickedItem = true;
 });
+
+$(document).ready(function () {
+  $(".item").hover(function () {
+      $(this).find("a video")[0].play();
+  }, function () {
+      var el = $(this).find("a video")[0];
+      el.pause();
+      el.currentTime = 0;
+  });
+});
