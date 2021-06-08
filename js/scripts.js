@@ -97,6 +97,8 @@ $('.description-content').on('click', function()
   clickedItem = true;
 });
 
+/* Videos autoplay */
+
 $(document).ready(function () {
   $(".item").hover(function () {
       $(this).find("a video")[0].play();
@@ -105,4 +107,62 @@ $(document).ready(function () {
       el.pause();
       el.currentTime = 0;
   });
+});
+
+/* Projects filters */
+
+var currentFilters = [];
+
+$('#projects').on('click', '.filters div', function() {
+  var filterSelected = false;
+  var link_name = $(this).attr('value');
+  $.each(currentFilters, function(key, value)
+  {  
+    if(link_name == value)
+    {
+      filterSelected = true;
+      currentFilters = jQuery.grep(currentFilters, function(valueDelete)
+      {
+        return valueDelete != value;
+      });
+      return false;
+    }
+  });
+
+  if(filterSelected == false)
+  {
+    currentFilters.push(link_name);
+    $(this).addClass("filterSelected");
+  }
+  else
+  {
+    $(this).removeClass("filterSelected");
+  }
+
+  if(currentFilters.length == 0)
+  {
+    $(".item").each(function()
+    {
+      $(this).removeClass("notfiltered");
+    });
+  }
+  else
+  {
+    $(".item").each(function()
+    {
+      $(this).removeClass("notfiltered");
+      var currentItem = $(this);
+      var filterValue = currentItem.find('img').attr('alt').toLowerCase();
+      var currentFiltersToLowerCase = currentFilters.map(v => v.toLowerCase());
+      $.each(currentFiltersToLowerCase, function(key, value)
+      {
+        console.log(value);
+        if(filterValue.indexOf(value) < 0)
+        {
+          currentItem.addClass("notfiltered");
+          console.log("delete");
+        }
+      });
+    });
+  }
 });

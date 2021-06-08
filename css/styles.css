@@ -176,6 +176,35 @@ a:hover
 	transform: scale(1.2, 1.2);
 }
 
+#projects .filters
+{
+	margin-top : 15px;
+}
+
+#projects .filters div
+{
+	display:inline-block;
+	padding: 5px;
+	border:solid 1px #222222;
+	border-radius: 5px;
+}
+
+#projects .filters div:hover
+{
+	background-color:#666666;
+	cursor:pointer;
+}
+
+#projects .filters .filterSelected
+{
+	background-color: #131516;
+}
+
+#projects .filters .filterSelected:hover
+{
+	background-color: #222222;
+}
+
 #projects .item {
 	margin:1.5%;
 	position: relative;
@@ -184,6 +213,7 @@ a:hover
 	width: 30%;
 	background-color: #000;
 	box-shadow: 10px 10px #00000030;
+	
 
 	border-bottom: solid 5px #666666;
 	border-right: solid 5px #222222;
@@ -194,6 +224,10 @@ a:hover
 	transition:all 1s;
 
 	cursor:pointer;
+}
+
+#projects .notfiltered {
+	display: none;
 }
 
 #projects .item img, #projects .item video {
@@ -403,8 +437,15 @@ footer
 	text-align: right;
 	background-color: #131516;
 	padding: 20px;
-	padding-right: 18%;
 	margin-top: 20px;
+}
+
+.foot
+{
+	width:70%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 footer a
