@@ -5,9 +5,10 @@ $(document).ready(function () {
 
   var yearStart = 2017;
   var expCount = 0;
-  
-  var string = "<ul>";
+  var eduCount = 0;
 
+  var educationLinesString = "<ul style='padding-top:0'>";
+  var educationDescriptionString = "<ul>";
   var experienceLinesString = "<ul style='padding-top:0'>";
   var experienceDescriptionString = "<ul>";
 
@@ -16,9 +17,24 @@ $(document).ready(function () {
     monthSize += parseInt($(this).attr("month"));
     expCount++;
   });
+
+  var tempMonthSize = 0;
+  $(".edu").each(function()
+  {
+    tempMonthSize += parseInt($(this).attr("month"));
+    eduCount++;
+  });
+
+  if(tempMonthSize > monthSize)
+  {
+    monthSize = tempMonthSize;
+  }
   
   var yearString = "<ul><li class='year' style='width:" + (4 / monthSize * 100)+ "%'></li>";
+  var educationString = "<ul>";
+  var experienceString = "<ul>";
 
+  var iterator = 0
   $(".exp").each(function()
   {
     var durationMonth = $(this).attr("month");
@@ -28,30 +44,69 @@ $(document).ready(function () {
 
     var durationWidthPercent = (durationMonth / monthSize * 100);
 
-    string += "<li class='experience' style='background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
+    experienceString += "<li class='experience' style='font-size:12px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
 
-    if(experienceName != "")
+    /*if(experienceName != "")
     {
-      experienceLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 1px #ffffff;width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+      if(iterator%2 != 0)
+      {
+        experienceLinesString += "<li style='font-size:13px;display:inline-block;border-right:solid 1px #ffffff;width:"+ (12 / monthSize * 100) / 2+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+      }
+      else
+      {
+        experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li style='font-size:13px;display:inline-block;border-left:solid 1px #ffffff;width:"+ (12 / monthSize * 100)/2 + "%;'>"+experienceDescription+"</li>";
+      }
     }
     else
     {
-      experienceLinesString += "<li style='height:0px;color:#ffffff00;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+      experienceLinesString += "<li style='height:0px;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+    }*/
+
+    //experienceDescriptionString += "<li style='font-size:12px;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + experienceDescription + "</li>";
+
+    iterator++;
+  });
+
+  experienceString += "</ul>";
+  experienceLinesString += "</ul>";
+  experienceDescriptionString += "</ul>";
+
+  $(".edu").each(function()
+  {
+    var durationMonth = $(this).attr("month");
+    var educationName = $(this).attr("name");
+    var educationDescription = $(this).attr("description");
+    var backgroundColor = $(this).attr("color");
+
+    var durationWidthPercent = (durationMonth / monthSize * 100);
+
+    educationString += "<li class='education' style='background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + educationName + "</il>";
+
+    if(educationName != "")
+    {
+      educationLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 1px #ffffff;width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+    }
+    else
+    {
+      educationLinesString += "<li style='height:0px;color:#ffffff00;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
     }
 
-    experienceDescriptionString += "<li style='font-size:15px;vertical-align:top;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + experienceDescription + "</li>";
+    educationDescriptionString += "<li style='font-size:15px;vertical-align:top;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + educationDescription + "</li>";
 
   });
 
+  educationLinesString += "</ul>";
+  educationDescriptionString += "</ul>";
+
   var i;
-  for (i = 0; i < expCount; i++) {
+  for (i = 0; i < eduCount; i++) {
     yearString += "<li class='year' style='width:" + (12 / monthSize * 100) + "%'>" + yearStart++ + "</li>";
   } 
   yearString += "<li class='year' style='width:1px'>" + yearStart++ + "</li></ul>";
 
-  string += "</ul>" + experienceLinesString + "</ul>" + experienceDescriptionString + "</ul></div>";
+  educationString += "</ul>" + educationLinesString + "</ul>" + educationDescriptionString + "</ul></div>";
 
-  $('.history .container').append("<div class='frieze'>" + yearString + string + "</div>");
+  $('.history .container').append("<div class='frieze'>" + experienceDescriptionString + experienceLinesString + experienceString + yearString + educationString + "</div>");
 })
 
 /* Projects duration and team size init */

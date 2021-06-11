@@ -187,16 +187,11 @@ a:hover
 	margin-left:5%;
 }
 
-.frieze .experience
+.frieze .education, .frieze .experience
 {
 	display:inline-block;
 	text-align:center;
 }
-
-/*.frieze .experience:hover
-{
-
-}*/
 
 .frieze .year
 {
