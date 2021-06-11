@@ -1,3 +1,59 @@
+/* Experience and Education */
+
+$(document).ready(function () {
+  var monthSize = 0;
+
+  var yearStart = 2017;
+  var expCount = 0;
+  
+  var string = "<ul>";
+
+  var experienceLinesString = "<ul style='padding-top:0'>";
+  var experienceDescriptionString = "<ul>";
+
+  $(".exp").each(function()
+  {
+    monthSize += parseInt($(this).attr("month"));
+    expCount++;
+  });
+  
+  var yearString = "<ul><li class='year' style='width:" + (4 / monthSize * 100)+ "%'></li>";
+
+  $(".exp").each(function()
+  {
+    var durationMonth = $(this).attr("month");
+    var experienceName = $(this).attr("name");
+    var experienceDescription = $(this).attr("description");
+    var backgroundColor = $(this).attr("color");
+
+    var durationWidthPercent = (durationMonth / monthSize * 100);
+
+    string += "<li class='experience' style='background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
+
+    if(experienceName != "")
+    {
+      experienceLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 1px #ffffff;width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+    }
+    else
+    {
+      experienceLinesString += "<li style='height:0px;color:#ffffff00;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+    }
+
+    experienceDescriptionString += "<li style='font-size:15px;vertical-align:top;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + experienceDescription + "</li>";
+
+  });
+
+  var i;
+  for (i = 0; i < expCount; i++) {
+    yearString += "<li class='year' style='width:" + (12 / monthSize * 100) + "%'>" + yearStart++ + "</li>";
+  } 
+  yearString += "<li class='year' style='width:1px'>" + yearStart++ + "</li></ul>";
+
+  string += "</ul>" + experienceLinesString + "</ul>" + experienceDescriptionString + "</ul></div>";
+
+  $('.history .container').append("<div class='frieze'>" + yearString + string + "</div>");
+})
+
 /* Projects duration and team size init */
 
 $(".description-content").each(function()
