@@ -46,24 +46,28 @@ $(document).ready(function () {
 
     experienceString += "<li class='experience' style='font-size:12px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
 
-    /*if(experienceName != "")
+      
+    if(iterator == 0)
     {
-      if(iterator%2 != 0)
-      {
-        experienceLinesString += "<li style='font-size:13px;display:inline-block;border-right:solid 1px #ffffff;width:"+ (12 / monthSize * 100) / 2+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
-      }
-      else
-      {
-        experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li style='font-size:13px;display:inline-block;border-left:solid 1px #ffffff;width:"+ (12 / monthSize * 100)/2 + "%;'>"+experienceDescription+"</li>";
-      }
+
+    }
+    else if(iterator == 1)
+    {
+      experienceLinesString += "<li class='experienceDescription' style='text-align:right;padding-right:15px;padding-left:10%;border-right:solid 1px #ffffff;width:"+ ((20 / monthSize * 100) + durationWidthPercent / 2)+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ ((2 / monthSize * 100)) + "%'></li>";
+
+
     }
     else
     {
-      experienceLinesString += "<li style='height:0px;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
-    }*/
-
-    //experienceDescriptionString += "<li style='font-size:12px;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + experienceDescription + "</li>";
-
+      if(experienceName != "")
+      {
+          experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li class='experienceDescription' style='padding-left:15px;border-left:solid 1px #ffffff;width:"+ (24 / monthSize * 100) + "%;'>"+experienceDescription+"</li>";
+      }
+      else
+      {
+        experienceLinesString += "<li style='height:0px;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+      }
+    }
     iterator++;
   });
 
@@ -91,7 +95,7 @@ $(document).ready(function () {
       educationLinesString += "<li style='height:0px;color:#ffffff00;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
     }
 
-    educationDescriptionString += "<li style='font-size:15px;vertical-align:top;width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + educationDescription + "</li>";
+    educationDescriptionString += "<li class='educationDescription' style='width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + educationDescription + "</li>";
 
   });
 
