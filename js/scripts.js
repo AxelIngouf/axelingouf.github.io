@@ -113,14 +113,17 @@ $(document).ready(function () {
   $('.history .container').append("<div class='frieze'>" + experienceDescriptionString + experienceLinesString + experienceString + yearString + educationString + "</div>");
 })
 
-/* Projects duration and team size init */
+/* Projects specs init */
 
 $(".description-content").each(function()
 {
   var string = "<div class=\"specs\"><ul>";
     $.each(this.attributes, function() {
       if(this.specified && this.name != "class" && this.name != "id") {
-        string += "<li>"+this.name+": "+this.value+"</li>";
+        var specName = this.name.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+          return letter.toUpperCase();
+        });
+        string += "<li>"+specName+": "+this.value+"</li>";
       }
     });
 
