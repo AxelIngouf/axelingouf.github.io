@@ -44,8 +44,15 @@ $(document).ready(function () {
 
     var durationWidthPercent = (durationMonth / monthSize * 100);
 
-    experienceString += "<li class='experience' style='font-size:12px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
+    if(experienceName != "")
+    {
+    experienceString += "<li class='experience' style='font-size:13px;padding:4px 0px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
+    }
+    else
+    {
+    experienceString += "<li class='experience' style='font-size:13px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
 
+    }
       
     if(iterator == 0)
     {
@@ -53,7 +60,7 @@ $(document).ready(function () {
     }
     else if(iterator == 1)
     {
-      experienceLinesString += "<li class='experienceDescription' style='text-align:right;padding-right:15px;padding-left:10%;border-right:solid 1px #ffffff;width:"+ ((20 / monthSize * 100) + durationWidthPercent / 2)+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ ((2 / monthSize * 100)) + "%'></li>";
+      experienceLinesString += "<li class='experienceDescription' style='text-align:right;padding-right:15px;padding-left:10%;border-right:groove 5px "+ backgroundColor +";width:"+ ((20 / monthSize * 100) + durationWidthPercent / 2)+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ ((2 / monthSize * 100)) + "%'></li>";
 
 
     }
@@ -61,7 +68,7 @@ $(document).ready(function () {
     {
       if(experienceName != "")
       {
-          experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li class='experienceDescription' style='padding-left:15px;border-left:solid 1px #ffffff;width:"+ (24 / monthSize * 100) + "%;'>"+experienceDescription+"</li>";
+          experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li class='experienceDescription' style='padding-left:15px;border-left:ridge 5px "+ backgroundColor +";width:"+ (24 / monthSize * 100) + "%;'>"+experienceDescription+"</li>";
       }
       else
       {
@@ -88,7 +95,7 @@ $(document).ready(function () {
 
     if(educationName != "")
     {
-      educationLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 1px #ffffff;width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
+      educationLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 2px"+ backgroundColor +";width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
     }
     else
     {
