@@ -97,6 +97,19 @@ a:hover
 	transition: all 0.6s;
 }
 
+.me .medias
+{
+	position:absolute;
+	right:16%;
+	top:15px;
+	width:25px;
+}
+
+.me .medias .media
+{
+	margin-bottom:5px;
+}
+
 .contact a
 {
 	font-size: 30px;
@@ -541,6 +554,14 @@ footer a
 	.container
 	{
 		width:90%;
+	}
+	
+	.me .medias
+	{
+		position:absolute;
+		right:6%;
+		top:15px;
+		width:25px;
 	}
 
 	.skills-logos .logo
