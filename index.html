@@ -34,24 +34,34 @@
 			<div class="media"><a target="_blank" href="https://www.linkedin.com/in/axel-ingouf-666a67167/"><img src="img/medias/linkedin_logo.png" width=25 height=25 alt="linkedin logo"/></a></div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="presentation"> 
-			Hey! I'm Axel Ingouf, I'm a game programmer passionate about AI, gameplay and new technologies that might worship Cyberpunk style a bit too much.
-			I fell in love with Unreal Engine 4 on first sight, and I'm already experimenting with Unreal Engine 5!<br/><br/>
-			<br/><br/>
-			<div class="contact" style="text-align: center;">
-				<a target="_blank" href="resume/Resume_Ingouf_Axel.pdf">Resume</a>
-			</div>
-		</div>
-	</div>
 </header>
 
-<div class="skills">
+<div class="tab">
+	<div class="container">
+		<div class="presentation"> 
+			Hey! I'm Axel Ingouf, a gameplay programmer at Activision. Passionate about Physics, gameplay and new technologies that might worship Cyberpunk style a bit too much.
+			I fell in love with Unreal Engine 4 on first sight, and I'm already experimenting with Unreal Engine 5!<br/><br/>
+			<!--<br/><br/>
+			<div class="contact" style="text-align: center;">
+				<a target="_blank" href="resume/Resume_Ingouf_Axel.pdf">Resume</a>
+			</div>-->
+		</div>
+	</div>
+</div>
+
+<div class="tablinks">
+	<button class="tablink activeTab" onclick="openTab(event, 'projects')"><h2>Projects</h2></button>
+	<button class="tablink" onclick="openTab(event, 'skills')"><h2>Skills</h2></button>
+	<button class="tablink" onclick="openTab(event, 'history')"><h2>Experience</h2></button>
+</div>
+
+<div id="skills" class="tabcontent hidden">
+
 	<div class="container">
 		<h2>SKILLS</h2>
 		<div class="detailed">
-		I'm fluent both in C/C++ and Java, but also have some good knowledge of C#, python and web languages like javascript (JQuery) or PHP. Apart from Unreal Engine 4,
-		I've already used Unity to make games, but also OpenGL, DirectX10 and lastly Vulkan.<br/><br/>
+		I'm fluent both in C/C++, C# and Python, but also have some good knowledge of Java and web languages like javascript (JQuery) or PHP. Apart from Unreal Engine 4,
+		I've already used Unity to make games, but also OpenGL, DirectX10 and Vulkan outside my work.<br/><br/>
 
 		Thanks to my curiosity and all the courses I had throughout my studies, I could oversee a lot of computer science fields (and master some of them),
 		mainly Object-Oriented Programming, web development, databases, network, versioning (git, svn and Perforce) and even assemblers.
@@ -66,13 +76,13 @@
 			<h2>Hard skills</h2>
 			<ul>
 				<li>
-					Fluent in C/C++ and Java.
+					Fluent in C/C++ and C#.
 				</li>
 				<li>
-					Always eager to work with Unreal Engine 4.
+					Always eager to work with Unreal Engine.
 				</li>
 				<li>
-					Good knowledge of web development (full-stack experience on a large company-scale project)
+					Good knowledge of Tools programming (First job at Activision before switching to Gameplay programming).
 				</li>
 			</ul>
 		</div>
@@ -83,7 +93,7 @@
 					I'm used to work in a team with both technical and non-technical people, as I already did several interdisciplinary game projects.
 				</li>
 				<li>
-					Autonomous but also know when to ask for help
+					Autonomous but also know when to ask for help.
 				</li>
 				<li>
 					Fluent in English (TOEIC score of 975), I'm always open minded about discovering foreign cultures and countries (Japan, Canada).
@@ -120,7 +130,7 @@
 	</div>
 </div>
 
-<div class="history">
+<div id="history" class="tabcontent hidden">
 	<div class="container">
 		<div class="title"><h2>EDUCATION & EXPERIENCE</h2></div>
 			
@@ -129,22 +139,19 @@
 			the course of study without going through the first. Before that I graduated from a French "DUT" computer science degree,
 			and went one year in an Engineering School before realising programming video games was my thing.
 		</div>
-
-
-		<div class="exp" month="20" name="" description="" color="#ffffffff"></div>
-		<div class="exp" month="4" name="Internship" description="Japan exchange programm; Python, Arduino, Project Management" color="#255801"></div>
-		<div class="exp" month="12" name="Quality and Security Programmer" description="Internship; Fullstack web development, Debugging, Quality Tests, Security Tests, Project Management, Sprints." color="#736601"></div>
-
-		<div class="edu" month="24" name="IUT de Calais" description="Computer Science Diploma; Procedural Programming, OOP, Web Programming, Network, Multithreading, AI, 2D Games, Databases, Architecture, Project Management." color="#457821"></div>
-		<div class="edu" month="12" name="IMT Lille Douai" description="Engineering School; Fullstack web Programming, OOP, Network, Project Management, Debugging." color="#938614"></div>
-		<div class="edu" month="12" name="" description="" color="#ffffffff"></div>
-		<div class="edu" month="12" name="ISART Digital Montréal" description="AEC Game Programming; 3D Game Engine Programming, Gameplay, AI, Network, Animation Programming, Rendering (Vulkan, DirectX10, OpenGL)." color="#015478"></div>
 	</div>
 </div>
 
-<div id="projects">
+<div id="projects" class="tabcontent">
 	<div class="container">
-		<div class="title"><h2>PROJECTS</h2>
+		<div class="title"><h2>SHIPPED TITLES</h2></div>
+
+		<div class="shipped">
+			<img src="img/projects/mw2.jpg" width="384" alt="call of duty modern warfare 2 remake 2022"/>
+			<img src="img/projects/wz2.jpg" width="384" alt="call of duty warzone 2 2022"/>
+		</div>
+
+		<div class="title"><h2>SIDE PROJECTS</h2>
 			<div class="filters">
 				<div value="c++">C++</div>
 				<div value="java">Java</div>

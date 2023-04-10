@@ -37,6 +37,61 @@ a:hover
 	color:#007900;
 }
 
+.tablinks
+{
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content:flex-end;
+}
+
+.tablink
+{
+	font-size: 14px;
+	width: 33%;
+
+	margin:0px 8px;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+	padding: 10px;
+	background-color: rgb(68, 74, 77);
+
+	margin-top: 15px;
+	margin-bottom: -20px;
+
+	border-right: solid 5px #222;
+	border-bottom: solid 1px #333;
+	
+	transition:all 1s;
+
+	font-family: chakrapetch;
+	color: rgb(223, 211, 211);
+}
+
+.tablink:hover {
+	transform:translate(5px, 0px);
+	box-shadow: 4.5px 0px #00000030;
+	border-right: solid 5px #008000;
+	overflow: hidden;
+	transition:all 0.3s;
+}
+
+.activeTab
+{
+	transform:translate(5px, 0px);
+	background-color: rgb(47, 51, 52);
+	box-shadow: 4.5px 0px #00000030;
+	border-right: solid 5px #008000;
+}
+
+.hidden
+{
+	display: none;
+}
+
 .me
 {
 	text-align: center;
@@ -143,7 +198,7 @@ a:hover
 	text-align: center;
 }
 
-.skills .skills-overview
+#skills .skills-overview
 {
 	display:inline-block;
 	padding-top : 50px;
@@ -152,7 +207,7 @@ a:hover
 	vertical-align:top;
 }
 
-.skills h2
+#skills h2
 {
 	padding-bottom: 15px;
 }
@@ -227,6 +282,24 @@ a:hover
 	padding-bottom:10px;
 }
 
+#projects .shipped img
+{
+	margin:1.5%;
+	display: inline-block;
+	overflow: hidden;
+	width: 30%;
+	background-color: #000;
+	box-shadow: 10px 10px #00000030;
+
+	border-bottom: solid 5px #666666;
+	border-right: solid 5px #222222;
+	
+	border-bottom-left-radius:5px;
+	border-top-right-radius:5px;
+	
+	transition:all 1s;
+}
+
 #projects .filters
 {
 	margin-top : 15px;
@@ -264,7 +337,6 @@ a:hover
 	width: 30%;
 	background-color: #000;
 	box-shadow: 10px 10px #00000030;
-	
 
 	border-bottom: solid 5px #666666;
 	border-right: solid 5px #222222;
@@ -543,7 +615,7 @@ footer a
 		width:90% !important;
 	}
 
-	.skills .skills-overview
+	#skills .skills-overview
 	{
 		float:none;
 		width:100%;
@@ -610,7 +682,7 @@ footer a
 		font-size: 13px !important;
 		line-height: 14px !important;
 	}
-	.history .education
+	#history .education
 	{
 		font-size:13px;
 	}
@@ -643,4 +715,68 @@ footer a
 	{
 		font-size:15px !important;
 	}
+}
+
+.column-section {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+  
+/* Define the styles for each column */
+.column {
+	width: 50%;
+}
+  
+/* Define the styles for the title of each experience */
+.experience-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+  
+/* Define the styles for the description of each experience */
+.experience-description {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 0;
+}
+
+.job
+{
+	border-left: solid 12px #333;
+}
+
+.study
+{
+	border-right: solid 12px #999;
+	text-align: right;
+}
+
+.experience
+{
+	padding: 5px 15px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.experienceDate {
+	font-size: 14px;
+	width: 40px;
+	position: relative;
+	border-bottom: solid 1px #999;
+	border-left: solid 1px #999;
+	border-right: solid 1px #333;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, #999, #FFF, #333);
+    border-image-slice: 1;
+}
+  
+.experienceDateContent {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
 }

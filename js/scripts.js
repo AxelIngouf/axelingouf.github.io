@@ -1,124 +1,106 @@
 /* Experience and Education */
 
+var monthPixelSize = 15;
+
 $(document).ready(function () {
-  var monthSize = 0;
+  const studies = [
+    { startDate: '2020-09-01', endDate: '2021-08-31', name: 'ISART Digital Montréal', description: 'AEC Game Programming; 3D Game Engine Programming, Gameplay, AI, Network, Animation Programming, Rendering (Vulkan, DirectX10, OpenGL).' },
+    { startDate: '2018-09-01', endDate: '2019-07-31', name: 'IMT Lille Douai', description: 'Engineering School; Fullstack web Programming, OOP, Network, Project Management, Debugging.' },
+    { startDate: '2016-09-01', endDate: '2018-06-30', name: 'IUT de Calais', description: 'Computer Science Diploma; Procedural Programming, OOP, Web Programming, Network, Multithreading, AI, 2D Games, Databases, Architecture, Project Management.' },
+  ];
 
-  var yearStart = 2017;
-  var expCount = 0;
-  var eduCount = 0;
+  const jobs = [
+    { startDate: '2022-11-10', name: 'Activision - Beenox', description: 'Gameplay Programmer' },
+    { startDate: '2021-09-06', endDate: '2022-11-10', name: 'Activision - Beenox', description: 'Tools Programmer' },
+    { startDate: '2018-10-01', endDate: '2019-07-31', name: 'Boulanger S.A.', description: 'Security and Web developer' },
+    { startDate: '2018-04-01', endDate: '2018-07-01', name: 'Sendai College, Japan', description: 'Japan exchange programm; Python, Arduino, Project Management' },
+  ];
 
-  var educationLinesString = "<ul style='padding-top:0'>";
-  var educationDescriptionString = "<ul>";
-  var experienceLinesString = "<ul style='padding-top:0'>";
-  var experienceDescriptionString = "<ul>";
+  const $columnSection = $('<section>').addClass('column-section');
 
-  $(".exp").each(function()
-  {
-    monthSize += parseInt($(this).attr("month"));
-    expCount++;
-  });
+  const $studiesColumn = getExperienceTypeColumn(studies, "study");
+  const $jobColumn = getExperienceTypeColumn(jobs, "job");
+  const $yearsColumn = getYearsColumn();
 
-  var tempMonthSize = 0;
-  $(".edu").each(function()
-  {
-    tempMonthSize += parseInt($(this).attr("month"));
-    eduCount++;
-  });
+  $columnSection.append($studiesColumn);
+  $columnSection.append($yearsColumn);
+  $columnSection.append($jobColumn);
 
-  if(tempMonthSize > monthSize)
-  {
-    monthSize = tempMonthSize;
-  }
-  
-  var yearString = "<ul><li class='year' style='width:" + (4 / monthSize * 100)+ "%'></li>";
-  var educationString = "<ul>";
-  var experienceString = "<ul>";
-
-  var iterator = 0
-  $(".exp").each(function()
-  {
-    var durationMonth = $(this).attr("month");
-    var experienceName = $(this).attr("name");
-    var experienceDescription = $(this).attr("description");
-    var backgroundColor = $(this).attr("color");
-
-    var durationWidthPercent = (durationMonth / monthSize * 100);
-
-    if(experienceName != "")
-    {
-    experienceString += "<li class='experience' style='font-size:13px;padding:4px 0px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
-    }
-    else
-    {
-    experienceString += "<li class='experience' style='font-size:13px;background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + experienceName + "</il>";
-
-    }
-      
-    if(iterator == 0)
-    {
-
-    }
-    else if(iterator == 1)
-    {
-      experienceLinesString += "<li class='experienceDescription' style='text-align:right;padding-right:15px;padding-left:10%;border-right:groove 5px "+ backgroundColor +";width:"+ ((20 / monthSize * 100) + durationWidthPercent / 2)+ "%;'>"+experienceDescription+"</li><li style='height:40px;display:inline-block;width:"+ ((2 / monthSize * 100)) + "%'></li>";
-
-
-    }
-    else
-    {
-      if(experienceName != "")
-      {
-          experienceLinesString += "<li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li><li class='experienceDescription' style='padding-left:15px;border-left:ridge 5px "+ backgroundColor +";width:"+ (24 / monthSize * 100) + "%;'>"+experienceDescription+"</li>";
-      }
-      else
-      {
-        experienceLinesString += "<li style='height:0px;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
-      }
-    }
-    iterator++;
-  });
-
-  experienceString += "</ul>";
-  experienceLinesString += "</ul>";
-  experienceDescriptionString += "</ul>";
-
-  $(".edu").each(function()
-  {
-    var durationMonth = $(this).attr("month");
-    var educationName = $(this).attr("name");
-    var educationDescription = $(this).attr("description");
-    var backgroundColor = $(this).attr("color");
-
-    var durationWidthPercent = (durationMonth / monthSize * 100);
-
-    educationString += "<li class='education' style='background-color:" + backgroundColor + ";width:" + durationWidthPercent + "%;'>" + educationName + "</il>";
-
-    if(educationName != "")
-    {
-      educationLinesString += "<li style='height:40px;color:#ffffff00;display:inline-block;border-right:solid 2px"+ backgroundColor +";width:"+ durationWidthPercent / 2 + "%;'>"+""+"</li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
-    }
-    else
-    {
-      educationLinesString += "<li style='height:0px;color:#ffffff00;display:inline-block;width:"+ durationWidthPercent / 2 + "%;'></li><li style='height:40px;display:inline-block;width:"+ durationWidthPercent / 2 + "%'></li>";
-    }
-
-    educationDescriptionString += "<li class='educationDescription' style='width:" + durationWidthPercent + "%;padding:0 " + durationWidthPercent * 0.025 + "%;display:inline-block;text-align:center;'>" + educationDescription + "</li>";
-
-  });
-
-  educationLinesString += "</ul>";
-  educationDescriptionString += "</ul>";
-
-  var i;
-  for (i = 0; i < eduCount; i++) {
-    yearString += "<li class='year' style='width:" + (12 / monthSize * 100) + "%'>" + yearStart++ + "</li>";
-  } 
-  yearString += "<li class='year' style='width:1px'>" + yearStart++ + "</li></ul>";
-
-  educationString += "</ul>" + educationLinesString + "</ul>" + educationDescriptionString + "</ul></div>";
-
-  $('.history .container').append("<div class='frieze'>" + experienceDescriptionString + experienceLinesString + experienceString + yearString + educationString + "</div>");
+  $('#history .container').append($columnSection);
 })
+
+function getYearsColumn()
+{
+  var maxDate = new Date('2016-09-01');
+  var currentDate = new Date();
+  const $column = $('<div>');
+
+  var monthCount = 11 - maxDate.getMonth();
+
+  for(let i = currentDate.getFullYear(); i > maxDate.getFullYear(); i--)
+  {  
+    const $date = $('<div>').addClass("experienceDate");
+    $date.height( monthCount * monthPixelSize + "px" );
+    const $dateContent = $('<div>').addClass("experienceDateContent").text(""+i);
+    $date.append($dateContent);
+    $column.append($date);
+
+    monthCount = 12;
+  }
+
+  return $column;
+}
+
+function getExperienceTypeColumn(experiencesArray, experienceType)
+{
+  var lastDate = new Date();
+  const $column = $('<div>').addClass('column');
+  experiencesArray.forEach(experience => {
+    var startDate = new Date(experience.startDate);
+    if( typeof experience.endDate !== 'undefined' )
+    {
+      var endDate = new Date(experience.endDate);
+    }
+    else
+    {
+      var endDate = new Date();
+    }
+
+    if(lastDate != endDate)
+    {
+      generateExperienceDiv($column, lastDate, endDate);
+    }
+    generateExperienceDiv($column, endDate, startDate, experience, experienceType);
+
+    lastDate = startDate;
+  });
+
+  return $column;
+}
+
+function generateExperienceDiv(column, endDate, startDate, data, experienceType)
+{
+  const $experience = $('<div>');
+  var durationInMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+  durationInMonths -= startDate.getMonth() + 1;
+  durationInMonths += endDate.getMonth() + 1;
+  $experience.height( durationInMonths * monthPixelSize + "px" ); // Set height proportional to duration
+  if(typeof data !== 'undefined')
+  {
+    $experience.addClass("experience").addClass(experienceType);
+
+    const $experienceTitle = $('<h3>').addClass('experience-title').text(data.name);
+    $experience.append($experienceTitle);
+    
+    if( typeof data.description !== 'undefined' )
+    {
+      const $experienceDescription = $('<p>').addClass('experience-description').text(data.description);
+      $experience.append($experienceDescription);
+    }
+  }
+
+  column.append($experience);
+}
 
 /* Projects specs init */
 
@@ -213,8 +195,7 @@ function deleteQuitButton()
   $('.quit-button').animate({visibility: 0}, 200,"linear",function()
   {
       $(this).remove();
-  }
-)
+  })
 }
 
 $('.description-content').on('click', function()
@@ -291,3 +272,27 @@ $('#projects').on('click', '.filters div', function() {
     });
   }
 });
+
+
+// Tabs
+
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "activeTab"
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" activeTab", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " activeTab";
+}
