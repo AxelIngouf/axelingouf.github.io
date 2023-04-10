@@ -207,11 +207,18 @@ $('.description-content').on('click', function()
 
 $(document).ready(function () {
   $(".item").hover(function () {
-      $(this).find("a video")[0].play();
+    var el = $(this).find("a video")[0];
+    if(typeof el !== "undefined")
+    {
+      el.play();
+    }
   }, function () {
-      var el = $(this).find("a video")[0];
+    var el = $(this).find("a video")[0];
+    if(typeof el !== "undefined")
+    {
       el.pause();
       el.currentTime = 0;
+    }
   });
 });
 
