@@ -162,7 +162,7 @@ $('.item').on('click', function()
     $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
 
-    var description = $('.project-description').eq(i);
+    var description = $('.project-description').eq(i-1);
 
     description.fadeIn("fast");
     description.css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 'fast');
