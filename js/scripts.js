@@ -126,7 +126,6 @@ var selectedItem = -1;
 
 $('.description-content').on('click', '.quit-button', function() {
   $('.selected').fadeOut("fast");
-  $('iframe').attr('src', $('iframe').attr('src'));
   $('.selected').removeClass("selected");
   deleteQuitButton();
   clickedItem = false;
@@ -135,12 +134,10 @@ $('.description-content').on('click', '.quit-button', function() {
 
 
 $(document).on('click', window, function() {
-
   if(clickedItem == false)
   {
     $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
-    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
     selectedItem = -1;
   }
@@ -152,14 +149,12 @@ $(document).on('click', window, function() {
 
 $('.item').on('click', function()
 {
-
   var i = ($(this).index() - 1) / 2;
 
   if(i != selectedItem)
   {
     $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
-    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
 
     var description = $('.project-description').eq(i-1);
@@ -177,7 +172,6 @@ $('.item').on('click', function()
   {
     $('.selected').fadeOut("fast");
     $('.selected').removeClass("selected");
-    $('iframe').attr('src', $('iframe').attr('src'));
     deleteQuitButton();
 
     selectedItem = -1;
@@ -269,11 +263,9 @@ $('#projects').on('click', '.filters div', function() {
       var currentFiltersToLowerCase = currentFilters.map(v => v.toLowerCase());
       $.each(currentFiltersToLowerCase, function(key, value)
       {
-        console.log(value);
         if(filterValue.indexOf(value) < 0)
         {
           currentItem.addClass("notfiltered");
-          console.log("delete");
         }
       });
     });
