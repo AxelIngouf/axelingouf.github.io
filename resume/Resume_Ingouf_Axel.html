@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Axel Ingouf - Resume</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #1a73e8;
+    --text: #1c1c1c;
+    --muted: #555;
+    --border: #ddd;
+    --page: 21cm;
+  }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 10.5pt;
+    color: var(--text);
+    background: #f0f0f0;
+    line-height: 1.45;
+  }
+
+  /* ── Page shell ── */
+  .page {
+    width: var(--page);
+    min-height: 29.7cm;
+    margin: 20px auto;
+    padding: 1.5cm 1.8cm 1.5cm 1.8cm;
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,.15);
+  }
+
+  /* ── Header ── */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 14px;
+  }
+
+  header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  header .title {
+    font-size: 11.5pt;
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 3px;
+  }
+
+  .contact {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .contact a { color: var(--muted); text-decoration: none; }
+
+  /* ── Sections ── */
+  section { margin-bottom: 14px; }
+
+  .section-title {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ── Experience entries ── */
+  .entry { margin-bottom: 11px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .entry-title {
+    font-weight: 700;
+    font-size: 10.5pt;
+  }
+
+  .entry-company {
+    font-weight: 500;
+    color: var(--muted);
+  }
+
+  .entry-date {
+    font-size: 9pt;
+    color: var(--muted);
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+
+  .entry-sub {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  ul.bullets {
+    padding-left: 16px;
+    margin-top: 3px;
+  }
+
+  ul.bullets li {
+    font-size: 9.5pt;
+    margin-bottom: 2px;
+    color: #333;
+  }
+
+  .shipped-badge {
+    display: inline-block;
+    font-size: 8.5pt;
+    background: #f1f7fe;
+    color: var(--accent);
+    border: 1px solid #c5dafc;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin: 2px 3px 2px 0;
+  }
+
+  /* ── Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px 16px;
+  }
+
+  .skill-row { font-size: 9.5pt; }
+  .skill-label { font-weight: 600; color: var(--muted); }
+
+  /* ── Education ── */
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-school { font-weight: 700; }
+  .edu-degree { color: var(--muted); font-size: 9.5pt; margin-top: 1px; }
+
+  /* ── Project ── */
+  .project-name { font-weight: 700; }
+  .project-tags { font-size: 8.5pt; color: var(--accent); margin-bottom: 3px; }
+
+  /* ── Print ── */
+  @media print {
+    body { background: none; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      padding: 1.1cm 1.5cm;
+      width: 100%;
+    }
+    a { color: inherit !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <div>
+      <h1>Axel Ingouf</h1>
+      <div class="title">Senior Gameplay Engineer</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:axel.ingouf@gmail.com">axel.ingouf@gmail.com</a><br/>
+      <a href="https://www.linkedin.com/in/axel-ingouf-666a67167/" target="_blank">linkedin.com/in/axel-ingouf-666a67167</a><br/>
+      <a href="https://www.axel-ingouf.com/" target="_blank">axel-ingouf.com</a>
+    </div>
+  </header>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section>
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Senior Gameplay Engineer &nbsp;<span class="entry-company">at Activision Beenox</span></span>
+        <span class="entry-date">Nov 2022 – Present &nbsp;·&nbsp; Québec, Canada</span>
+      </div>
+      <div style="margin-bottom:5px;">
+        <span class="shipped-badge">Call of Duty: MWIII (2023)</span>
+        <span class="shipped-badge">Call of Duty: Black Ops 6 (2024)</span>
+        <span class="shipped-badge">Call of Duty: Black Ops 7 (2025)</span>
+      </div>
+      <ul class="bullets">
+        <li>Designed and implemented gameplay systems for AAA Call of Duty titles in a large-scale C++ codebase.</li>
+        <li>Collaborated with design, animation, and audio teams to deliver high-quality player-facing features.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Tools Programmer &nbsp;<span class="entry-company">at Activision Beenox</span></span>
+        <span class="entry-date">Sep 2021 – Nov 2022 &nbsp;·&nbsp; Québec, Canada</span>
+      </div>
+      <div style="margin-bottom:5px;">
+        <span class="shipped-badge">Call of Duty: Modern Warfare II (2022)</span>
+        <span class="shipped-badge">Call of Duty: Warzone 2.0 (2022)</span>
+      </div>
+      <ul class="bullets">
+        <li>Built and maintained internal tools used daily by designers and engineers across the project.</li>
+        <li>Contributed to tooling pipelines supporting the development of two simultaneously shipped titles.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Security &amp; Web Developer &nbsp;<span class="entry-company">at Boulanger S.A.</span></span>
+        <span class="entry-date">Oct 2018 – Jul 2019 &nbsp;·&nbsp; France</span>
+      </div>
+      <ul class="bullets">
+        <li>Developed internal web tools and automated quality/security test workflows.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Exchange Programme &nbsp;<span class="entry-company">at Sendai College, Japan</span></span>
+        <span class="entry-date">Apr 2018 – Jul 2018</span>
+      </div>
+      <ul class="bullets">
+        <li>International engineering exchange: Python, Arduino prototyping, and cross-cultural project management.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section>
+    <div class="section-title">Personal Projects</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="project-name">Freyr Engine</span>
+        <span class="entry-date">2021 – Present</span>
+      </div>
+      <div class="project-tags">C++23 · Vulkan · ECS · PhysX · Recast/Detour · SteamWorks · Multiplayer · Python (build codegen)</div>
+      <ul class="bullets">
+        <li>Custom 3D game engine built from scratch - Vulkan renderer with cascaded shadows, real-time portals (up to 4 concurrent), GPU skinning, render-to-texture surfaces, and video playback on world geometry.</li>
+        <li>Multithreaded pool-based ECS with generational handles; systems declare read/write dependencies for parallel dispatch; Python-generated reflection/serialization pipeline.</li>
+        <li>PhysX integration covering rigid bodies, ragdoll, rope simulation, and portal physics (cross-portal teleportation). Voronoi-based real-time destructible geometry via CGAL.</li>
+        <li>Behaviour tree AI, Recast/Detour navmesh, skeletal animation with procedural IK and dismemberment, host-authority multiplayer via SLikeNet with client-side interpolation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section>
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Languages: </span>C++, C#, Python, JavaScript</div>
+      <div class="skill-row"><span class="skill-label">Engines: </span>Unreal Engine, Unity, custom</div>
+      <div class="skill-row"><span class="skill-label">Graphics: </span>Vulkan, DirectX 10, OpenGL</div>
+      <div class="skill-row"><span class="skill-label">Tools: </span>Visual Studio, CMake, Git, Perforce</div>
+      <div class="skill-row"><span class="skill-label">Domains: </span>Gameplay, Animation, AI, Networking</div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section>
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-school">ISART Digital, Montréal</span>
+        <span class="entry-date">Sep 2020 – Aug 2021</span>
+      </div>
+      <div class="edu-degree">AEC Game Programming · 3D Engine, Gameplay, AI, Network, Animation, Rendering (Vulkan, DirectX10, OpenGL)</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-school">IMT Lille Douai</span>
+        <span class="entry-date">Sep 2018 – Jul 2019</span>
+      </div>
+      <div class="edu-degree">Engineering School · Fullstack Web, OOP, Network, Project Management</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-school">IUT de Calais</span>
+        <span class="entry-date">Sep 2016 – Jun 2018</span>
+      </div>
+      <div class="edu-degree">Computer Science Diploma (DUT) · OOP, Web, Network, Multithreading, AI, Databases, Architecture</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

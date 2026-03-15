@@ -1,372 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-	<title>Axel Ingouf - Game Programmer</title>
-
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<title>Axel Ingouf - Senior Gameplay Engineer</title>
 	<link rel="icon" type="image/png" href="img/favicon/icon.ico"/>
 	<link rel="stylesheet" href="css/styles.css"/>
-	
-	<script src="https://www.googletagmanager.com/gtag/js?id=G-5L44GXB15H"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5L44GXB15H"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-5L44GXB15H');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-5L44GXB15H');
 	</script>
 </head>
 
 <body>
-<header>
-	<div class="me">
+
+<nav class="site-nav">
+	<div class="nav-brand"><span>A</span>I</div>
+	<ul class="nav-links">
+		<li><a href="#shipped">Games</a></li>
+		<li id="engine-nav" style="display:none"><a href="#engine">Engine</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#projects">Projects</a></li>
+		<li><a href="#experience">Experience</a></li>
+	</ul>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+	<div class="hero-name">
 		<h1><div class="a">A</div><div class="name">xel</div> <div class="i">I</div><div class="name">NGOUF</div></h1>
-		<h2>Gameplay programmer</h2>
-		
-		<div class="medias">
-			<div class="media"><a href="mailto:axel.ingouf@gmail.com"><img src="img/medias/email_logo.png" width=25 height=25 alt="email logo"/></a></div>
-			<div class="media"><a target="_blank" href="https://github.com/AxelIngouf"><img src="img/medias/github_logo.webp" width=25 height=25 alt="github logo"/></a></div>
-			<div class="media"><a target="_blank" href="https://www.linkedin.com/in/axel-ingouf-666a67167/"><img src="img/medias/linkedin_logo.png" width=25 height=25 alt="linkedin logo"/></a></div>
+		<h2 class="hero-title">Senior Gameplay Engineer</h2>
+	</div>
+	<p class="hero-bio">
+		Senior Gameplay Engineer at Activision Beenox. I ship seasonal gameplay, build systems that give designers real control, and care about the feel as much as the frame count.
+	</p>
+	<div class="hero-links">
+		<a href="mailto:axel.ingouf@gmail.com">
+			<img src="img/medias/email_logo.png" width="18" height="18" alt="" loading="lazy"/> Email
+		</a>
+		<a target="_blank" href="https://github.com/AxelIngouf">
+			<img src="img/medias/github_logo.webp" width="18" height="18" alt="" loading="lazy"/> GitHub
+		</a>
+		<a target="_blank" href="https://www.linkedin.com/in/axel-ingouf-666a67167/">
+			<img src="img/medias/linkedin_logo.png" width="18" height="18" alt="" loading="lazy"/> LinkedIn
+		</a>
+		<a href="resume/Resume_Ingouf_Axel.pdf" target="_blank">↓ Resume</a>
+	</div>
+	<span class="scroll-mouse" aria-hidden="true"></span>
+</section>
+
+<!-- ==================== SHIPPED TITLES ==================== -->
+<section id="shipped">
+	<div class="section-header">
+		<h2>Shipped Titles</h2>
+	</div>
+	<div class="shipped-grid">
+		<div class="shipped-card">
+			<img src="img/projects/bo7.webp" alt="Call of Duty: Black Ops 7" loading="lazy"/>
+			<div class="shipped-overlay">
+				<span class="shipped-meta">Activision · 2025</span>
+			</div>
+		</div>
+		<div class="shipped-card">
+			<img src="img/projects/bo6.webp" alt="Call of Duty: Black Ops 6" loading="lazy"/>
+			<div class="shipped-overlay">
+				<span class="shipped-meta">Activision · 2024</span>
+			</div>
+		</div>
+		<div class="shipped-card">
+			<img src="img/projects/mw3.png" alt="Call of Duty: Modern Warfare III" loading="lazy"/>
+			<div class="shipped-overlay">
+				<span class="shipped-meta">Activision · 2023</span>
+			</div>
+		</div>
+		<div class="shipped-card">
+			<img src="img/projects/wz2.jpg" alt="Call of Duty: Warzone 2.0" loading="lazy"/>
+			<div class="shipped-overlay">
+				<span class="shipped-meta">Activision · 2022</span>
+			</div>
+		</div>
+		<div class="shipped-card">
+			<img src="img/projects/mw2.jpg" alt="Call of Duty: Modern Warfare II" loading="lazy"/>
+			<div class="shipped-overlay">
+				<span class="shipped-meta">Activision · 2022</span>
+			</div>
 		</div>
 	</div>
-</header>
+</section>
 
-<div class="tab">
-	<div class="container">
-		<div class="presentation"> 
-			Hey! I'm Axel Ingouf, a gameplay programmer at Activision. Passionate about Physics, gameplay and new technologies that might worship Cyberpunk style a bit too much.
-			I fell in love with Unreal Engine 4 on first sight, and I'm already experimenting with Unreal Engine 5!<br/><br/>
+<!-- ==================== FREYR ENGINE ==================== -->
+<section id="engine" style="display:none">
+	<div class="section-header">
+		<h2>Personal Engine</h2>
+	</div>
+	<div class="engine-container">
+		<div class="engine-intro">
+			<div class="engine-info">
+				<h3>Freyr Engine</h3>
+				<p class="engine-tagline">Custom 3D Game Engine - C++23 - In Progress</p>
+				<p class="engine-description">
+					A personal 3D game engine built entirely from scratch; ECS architecture, custom Vulkan renderer,
+					PhysX integration, real-time portals, procedural destruction, networked multiplayer, and a custom
+					serialization format. Born from the desire to go deeper than any shipping title allows.
+				</p>
+				<div class="engine-tags">
+					<span class="engine-tag">C++23</span>
+					<span class="engine-tag">Vulkan</span>
+					<span class="engine-tag">ECS</span>
+					<span class="engine-tag">PhysX</span>
+					<span class="engine-tag">OpenAL</span>
+					<span class="engine-tag">Recast/Detour</span>
+					<span class="engine-tag">Multithreaded</span>
+					<span class="engine-tag">Multiplayer</span>
+				</div>
+			</div>
+			<div class="engine-features">
+				<div class="engine-feature">
+					<h4>Vulkan Renderer</h4>
+					<p>Cascaded shadow maps, real-time portals (up to 4 concurrent, stencil-based), GPU skinning, particles, render-to-texture screens, video playback on world surfaces, LODs.</p>
+				</div>
+				<div class="engine-feature">
+					<h4>ECS + Scene Graph</h4>
+					<p>Multithreaded, handle-based entity pool with generational indices, compile-time component pooling, data-oriented system iteration with declared read/write dependencies. Python-generated reflection for editor and serialization.</p>
+				</div>
+				<div class="engine-feature">
+					<h4>Physics and Portals</h4>
+					<p>Full PhysX integration; ragdoll, rope simulation, D6 joints, terrain heightfields. Portal physics with cross-portal teleportation and object continuity. Voronoi-based real-time destructible geometry (CGAL).</p>
+				</div>
+				<div class="engine-feature">
+					<h4>Animation</h4>
+					<p>Skeletal animation with GPU skinning, procedural animation, IK hands system, ragdoll, and a dismemberment system with physics-driven limb separation.</p>
+				</div>
+				<div class="engine-feature">
+					<h4>AI</h4>
+					<p>Behaviour tree system, Recast/Detour navmesh, sense system (sight cone, radius, memory).</p>
+				</div>
+				<div class="engine-feature">
+					<h4>Networking</h4>
+					<p>Entity replication with host-authority model, replicated commands, client-side interpolation, and file transfer. Steam integration via SteamWorks SDK.</p>
+				</div>
+				<div class="engine-feature">
+					<h4>UI</h4>
+					<p>Fully custom Vulkan UI renderer with dedicated graphics pipelines for images and text. Component-based widget system: images, text, buttons with hover states, checkboxes, draggable panels with optional grid snapping, and custom cursors. Anchor-based transform system for resolution-independent layouts. Multi-viewport support — UI can render to any texture, including world-space surfaces. FFmpeg video playback with synchronized audio in UI panels. Custom font rendering with per-character vertex generation.</p>
+				</div>
+			</div>
+		</div>
+		<div class="engine-gallery">
+			<div class="engine-screenshot featured">
+				<video autoplay loop muted playsinline poster="img/projects/engine.png">
+					<source src="img/freyr/portal.webm" type="video/webm"/>
+				</video>
+				<span class="screenshot-caption">Portal rendering</span>
+			</div>
+			<div class="engine-screenshot">
+				<video autoplay loop muted playsinline>
+					<source src="img/freyr/ragdoll.webm" type="video/webm"/>
+				</video>
+				<span class="screenshot-caption">Ragdoll physics</span>
+			</div>
+			<div class="engine-screenshot">
+				<video autoplay loop muted playsinline>
+					<source src="img/freyr/destruction.webm" type="video/webm"/>
+				</video>
+				<span class="screenshot-caption">Procedural destruction</span>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="tablinks">
-	<button class="tablink activeTab" onclick="openTab(event, 'projects')"><h2>Projects</h2></button>
-	<button class="tablink" onclick="openTab(event, 'skills')"><h2>Skills</h2></button>
-	<button class="tablink" onclick="openTab(event, 'history')"><h2>Experience</h2></button>
-</div>
-
-<div id="skills" class="tabcontent hidden">
-
-	<div class="container">
-		<h2>SKILLS</h2>
-		<div class="detailed">
-		I'm fluent both in C/C++, C# and Python, but also have some good knowledge of Java and web languages like javascript (JQuery) or PHP. Apart from Unreal Engine 4,
-		I've already used Unity to make games, but also OpenGL, DirectX10 and Vulkan outside my work.<br/><br/>
-
-		Thanks to my curiosity and all the courses I had throughout my studies, I could oversee a lot of computer science fields (and master some of them),
-		mainly Object-Oriented Programming, web development, databases, network, versioning (git, svn and Perforce) and even assemblers.
-
-		<br/><br/>
-		By joining Isart Digital Montréal, I had the opportunity to specialize in video games related development.
-		From improving my skills in OOP and network to learning everything there is to know about core game development, animation programming, physics,
-		memory management and 3D game engine programming (Vulkan), which is our final project graduation.
+<!-- ==================== SKILLS ==================== -->
+<section id="skills">
+	<div class="section-header">
+		<h2>Skills</h2>
+	</div>
+	<div class="skills-container">
+		<p class="skills-text">
+			Fluent in C/C++ and C# with deep expertise in Unreal Engine. Years of AAA shipping have sharpened a focus on performance, maintainability and cross-discipline collaboration.
+		</p>
+		<div class="skills-columns">
+			<div class="skills-column">
+				<h3>Technical</h3>
+				<ul>
+					<li>C/C++; primary language</li>
+					<li>C#; Unity and tooling</li>
+					<li>Unreal Engine; gameplay, physics, animation</li>
+					<li>Graphics APIs; Vulkan, DirectX 10, OpenGL</li>
+					<li>Versioning; Git, SVN, Perforce</li>
+					<li>Python; scripting and automation</li>
+				</ul>
+			</div>
+			<div class="skills-column">
+				<h3>Other</h3>
+				<ul>
+					<li>Cross-discipline collaboration (art, design, audio)</li>
+					<li>Shipped multiple AAA titles under production pressure</li>
+					<li>Fluent English (TOEIC 975)</li>
+					<li>International experience; Japan, Canada, France</li>
+				</ul>
+			</div>
 		</div>
-		
-		<div class="skills-overview">
-			<h2>Hard skills</h2>
-			<ul>
-				<li>
-					Fluent in C/C++ and C#.
-				</li>
-				<li>
-					Always eager to work with Unreal Engine.
-				</li>
-				<li>
-					Good knowledge of Tools programming (First job at Activision before switching to Gameplay programming).
-				</li>
-			</ul>
-		</div>
-		<div class="skills-overview">
-			<h2>Soft skills</h2>
-			<ul>
-				<li>
-					I'm used to work in a team with both technical and non-technical people, as I already did several interdisciplinary game projects.
-				</li>
-				<li>
-					Autonomous but also know when to ask for help.
-				</li>
-				<li>
-					Fluent in English (TOEIC score of 975), I'm always open minded about discovering foreign cultures and countries (Japan, Canada).
-				</li>
-			</ul>
-		</div>
-
 		<div class="skills-logos">
 			<div class="logo">
-				<img src="img/skills_logos/c++.webp" width=100 height=100 alt="c++ logo"/>
+				<img src="img/skills_logos/c++.webp" width="100" height="100" alt="c++ logo" loading="lazy"/>
 				<div>C++</div>
 			</div>
 			<div class="logo">
-				<img src="img/skills_logos/csharp.webp" width=100 height=100 alt="c logo"/>
+				<img src="img/skills_logos/csharp.webp" width="100" height="100" alt="c# logo" loading="lazy"/>
 				<div>C#</div>
 			</div>
 			<div class="logo">
-				<img src="img/skills_logos/python.svg" width=100 height=100 alt="python logo"/>
+				<img src="img/skills_logos/python.svg" width="100" height="100" alt="python logo" loading="lazy"/>
 				<div>Python</div>
 			</div>
 			<div class="logo">
-				<img src="img/skills_logos/unreal.webp" width=100 height=100 alt="unreal logo"/>
+				<img src="img/skills_logos/unreal.webp" width="100" height="100" alt="unreal logo" loading="lazy"/>
 				<div>Unreal</div>
 			</div>
 			<div class="logo">
-				<img src="img/skills_logos/unity.svg" width=100 height=100 alt="unity logo"/>
-				<div>Unity</div>
+				<img src="img/skills_logos/vk.png" width="100" height="100" alt="vulkan logo" loading="lazy"/>
+				<div>Vulkan</div>
 			</div>
 			<div class="logo">
-				<img src="img/skills_logos/visual.webp" width=100 height=100 alt="visual studio logo"/>
+				<img src="img/skills_logos/visual.webp" width="100" height="100" alt="visual studio logo" loading="lazy"/>
 				<div>Visual</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div id="history" class="tabcontent hidden">
-	<div class="container">
-		<div class="title"><h2>EDUCATION & EXPERIENCE</h2></div>
-			
-		<div style='margin-top:15px;'>
-			Being a student at Isart Digital Montréal from October 2020 to June 2021, I managed to directly integrate the second year of
-			the course of study without going through the first. Before that I graduated from a French "DUT" computer science degree,
-			and went one year in an Engineering School before realising programming video games was my thing.
-		</div>
+<!-- ==================== SIDE PROJECTS ==================== -->
+<section id="projects">
+	<div class="section-header">
+		<h2>Side Projects</h2>
 	</div>
-</div>
-
-<div id="projects" class="tabcontent">
-	<div class="container">
-		<div class="title"><h2>SHIPPED TITLES</h2></div>
-
-		<div class="shipped">
-			<img src="img/projects/mw2.jpg" alt="call of duty modern warfare 2 remake 2022"/>
-			<img src="img/projects/wz2.jpg" alt="call of duty warzone 2 2022"/>
+	<div class="skills-container">
+		<div class="filters">
+			<div value="c++">C++</div>
+			<div value="java">Java</div>
+			<div value="unreal">Unreal</div>
+			<div value="game">Game</div>
+			<div value="2d">2D</div>
+			<div value="3d">3D</div>
+			<div value="engine">Engine</div>
 		</div>
 
-		<div class="title"><h2>SIDE PROJECTS</h2>
-			<div class="filters">
-				<div value="c++">C++</div>
-				<div value="java">Java</div>
-				<div value="unreal">Unreal</div>
-				<div value="game">Game</div>
-				<div value="2d">2D</div>
-				<div value="3d">3D</div>
-				<div value="engine">Engine</div>
+		<div class="items-grid">
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>CloneEngine · C++ · Vulkan · 2021</span></div>
+					<img src="img/projects/engine.png" width="500" height="500" alt="Static image 3D Engine Vulkan C++" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/engine.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>The Loony Bin · Unreal · 2021</span></div>
+					<img src="img/projects/theloonybin.webp" width="500" height="500" alt="Static image TheLoonyBin Unreal C++ 3D Game" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/theloonybin.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Plush Rush · Unreal · 2021</span></div>
+					<img src="img/projects/plushrush.webp" width="500" height="500" alt="PlushRush Unreal C++ 3D Game" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/plushrush.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Base Defender · Unreal · 2020</span></div>
+					<img src="img/projects/basedefender.webp" width="500" height="500" alt="Base Defender Unreal C++ 3D Game" loading="lazy"/>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Animation Programming · C++ · 2020</span></div>
+					<img src="img/projects/animation.png" width="500" height="500" alt="Animation 3D Engine C++" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/animation.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>DirectX10 Rendering · C++ · 2020</span></div>
+					<img src="img/projects/directx10.png" width="500" height="500" alt="DirectX10 Rendering Engine 3D C++" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/directx10.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Bomberman · C++ SDL · 2020 / Java · 2018</span></div>
+					<img src="img/projects/bomberman.png" width="500" height="500" alt="Static image Bomberman C++ Java 2D Game" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/bomberman.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Project Adventure · Java · 2017</span></div>
+					<img src="img/projects/projectadventure.webp" width="500" height="500" alt="Static image ProjectAdventure Java 2D Game" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/projectadventure.webm" type="video/webm"/>
+					</video>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Power 4 · C++ SDL · 2020 / C SDL · 2017</span></div>
+					<img src="img/projects/power4.webp" width="500" height="500" alt="Power4 C++ C SDL 2D Game" loading="lazy"/>
+				</a>
+			</div>
+			<div class="item">
+				<a class="anim"><div class="item-overlay"><span>Game of Life · Java · 2017</span></div>
+					<img src="img/projects/gameoflife.webp" width="500" height="500" alt="Static image Game of Life Java 2D Game" loading="lazy"/>
+					<video class="dynamic" muted loop>
+						<source src="img/projects/gameoflife.webm" type="video/webm"/>
+					</video>
+				</a>
 			</div>
 		</div>
 
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>CloneEngine, C++, Vulkan, 2021</span></div>
-				<img src="img/projects/engine.png" width="500" height="500" alt="Static image 3D Engine Vulkan C++"/>				
-				<video class="dynamic" muted loop>
-					<source src="img/projects/engine.webm" alt="Dynamic image 3D Game Engine Vulkan C++" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
-		</div>
-		
+		<!-- Project descriptions; order must match items-grid order above -->
 		<div class="project-description">
 			<div class="description-content" Team-size="3" Duration="4 months" Skills="C++, Vulkan, PhysX, ImGui, FMod, CMake, Project Management">
-				Clone engine is a fully functionnal C++ 3D Game Engine made using Vulkan, PhysX, ImGui and fmod. It was part of my school final project and was used to make
-				several demos. I was personnally in charge of the Physics, Audio, In-Game UI, Editor UI, Memory Management, Multithread and some other Core features.
+				Clone engine is a fully functional C++ 3D Game Engine made using Vulkan, PhysX, ImGui and FMod. School final project used to build several demos.
+				I was personally in charge of Physics, Audio, In-Game UI, Editor UI, Memory Management, Multithreading and other core systems.
 			</div>
 		</div>
-
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>The Loony Bin, Unreal, 2021</span></div>
-				<img src="img/projects/theloonybin.webp" width="500" height="500" alt="Static image TheLoonyBin Unreal C++ 3D Game"/>				
-				<video class="dynamic" muted loop>
-					<source src="img/projects/theloonybin.webm" alt="Dynamic image TheLoonyBin Unreal C++ 3D Game" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
-		</div>
-		
 		<div class="project-description">
 			<div class="description-content" Team-size="8" Duration="4 days" Skills="C++, Unreal, Interdisciplinary Project, Project Management">
-				The Loony Bin was made during Isart Game Week 2021, a 4 days game jam with a team of 2 programmers,
-				3 3D artists, 2 game designers and 1 sound designer.
-				
-				Our goal was to make a game on the theme of "Generation". So we came up with this horror game taking place
-				in a randomly generated maze inspired by Amnesia and SCP-087.<br/><br/>
-
-				I mainly worked on the maze generation, with the goal of having a playable level each time you play with all sorts of randomness in the items, rooms,
-				lights and decor placement.<br/><br/>
-				
-				The other programmer, <a target="_blank" href="https://ca.linkedin.com/in/valentin-dol-26493515a">Valentin Dol</a>, worked on other aspects of the game,
-				like the light/shadow design, collectibles and even the enemy.
-				Most of the 3D and 2D assets were made by our 2 main 3D artists, <a target="_blank" href="https://www.artstation.com/lecossecanna">Anna Le Cossec</a>
-				and <a target="_blank" href="https://www.artstation.com/artatmospere">Juliette Sirulnick</a>.
+				The Loony Bin; Isart Game Week 2021, a 4-day jam with 2 programmers, 3 3D artists, 2 game designers, 1 sound designer.
+				Theme: "Generation". Horror game in a randomly generated maze inspired by Amnesia and SCP-087.<br/><br/>
+				I handled maze generation with randomised item, room, light and decor placement each run.<br/><br/>
+				Other programmer: <a target="_blank" href="https://ca.linkedin.com/in/valentin-dol-26493515a">Valentin Dol</a>.
+				3D artists: <a target="_blank" href="https://www.artstation.com/lecossecanna">Anna Le Cossec</a> and <a target="_blank" href="https://www.artstation.com/artatmospere">Juliette Sirulnick</a>.
 				<div class="links">
-					<a target="_blank" class="download" id="source-code" href="https://github.com/Valentineed/EscapeTheDark">Source Code</a>
-					<a target="_blank" class="download" id="exe" href="https://drive.google.com/u/0/uc?id=1IZAhL6WYt_8vmMKkr2hkDF4oCxSxqNdj&export=download">Download</a>
+					<a target="_blank" class="download source-code" href="https://github.com/Valentineed/EscapeTheDark">Source Code</a>
+					<a target="_blank" class="download" href="https://drive.google.com/u/0/uc?id=1IZAhL6WYt_8vmMKkr2hkDF4oCxSxqNdj&export=download">Download</a>
 				</div>
 			</div>
-		</div>
-
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>Plush Rush, Unreal, 2021</span></div>
-				<img src="img/projects/plushrush.webp" width="500" height="500" alt="PlushRush Unreal C++ 3D Game"/>
-				<video class="dynamic" muted loop>
-					<source src="img/projects/plushrush.webm" alt="Dynamic image PlushRush Unreal C++ 3D Game" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
 		</div>
 		<div class="project-description">
 			<div class="description-content" Team-size="11" Duration="4 weeks" Skills="C++, Unreal, Interdisciplinary Project, Project Management">
-				Isart interdisciplinary project with a team of 3 programmers and 8 3D artists.<br />
-				Racing game inspired by Mario kart gameplay and Fall Guys artistic direction.
+				Interdisciplinary project with 3 programmers and 8 3D artists.
+				Racing game inspired by Mario Kart gameplay and Fall Guys art direction.
 				<div class="links">
-					<a target="_blank" class="download" id="source-code" href="https://github.com/AxelIngouf/PlushRush">Source Code</a>
+					<a target="_blank" class="download source-code" href="https://github.com/AxelIngouf/PlushRush">Source Code</a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>Base Defender, Unreal, 2020</span>
-			</div><img src="img/projects/basedefender.webp" width="500" height="500" alt="Base Defender Unreal C++ 3D Game"/></a>
 		</div>
 		<div class="project-description">
-			<div class="description-content" Team-size="4 initially but ended up wth 8 members" Duration="7 weeks" Skills="C++, Unreal, Interdisciplinary Project, Project Management">
-				First project on Unreal Engine, without any background in Unity or any other game engine.<br/>Part of an interdisciplinary school project with 3 game designers,
-				we had to develop a game on the theme of Base defense. Eventually during the last 3 weeks, our project being one of the most stable, we ended up integrating
-				another team to ours which had some difficulties in its project.<br/>
+			<div class="description-content" Team-size="4–8" Duration="7 weeks" Skills="C++, Unreal, Interdisciplinary Project, Project Management">
+				First Unreal Engine project with no prior engine experience. Interdisciplinary school project that grew from 4 to 8 members mid-way due to its stability.
 				<div class="links">
-					<a target="_blank" class="download" id="source-code" href="https://github.com/AxelIngouf/UnrealBaseDefender">Source Code</a>
-					<a target="_blank" class="download" id="exe" href="https://drive.google.com/file/d/1f1cxeQG9IpQajgIwvCGXrHeZ7zz8CWRr/view?usp=sharing">Download</a>
+					<a target="_blank" class="download source-code" href="https://github.com/AxelIngouf/UnrealBaseDefender">Source Code</a>
+					<a target="_blank" class="download" href="https://drive.google.com/file/d/1f1cxeQG9IpQajgIwvCGXrHeZ7zz8CWRr/view?usp=sharing">Download</a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>Animation Programming, C++, 2020</span>
-				</div><img src="img/projects/animation.png" width="500" height="500" alt="Animation 3D Engine C++"/>
-				
-				<video class="dynamic" muted loop>
-					<source src="img/projects/animation.webm" alt="Animation C++" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
 		</div>
 		<div class="project-description">
 			<div class="description-content" Team-size="1" Duration="4 days" Skills="C++, Animation, Mathematics">
 			</div>
 		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>DirectX10 Rendering, C++, 2020</span>
-				</div><img src="img/projects/directx10.png" width="500" height="500" alt="DirectX10 Rendering Engine 3D C++"/>
-				
-				<video class="dynamic" muted loop>
-					<source src="img/projects/directx10.webm" alt="DirectX10 Rendering C++" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
-		</div>
 		<div class="project-description">
 			<div class="description-content" Team-size="2" Duration="4 days" Skills="C++, DirectX10, Project Management">
 			</div>
 		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>Bomberman, C++ SDL, 2020<br/>Bomberman, Java, 2018</span></div>
-				<img src="img/projects/bomberman.png" width="500" height="500" alt="Static image Bomberman C++ Java 2D Game"/>
-				<video class="dynamic" muted loop>
-					<source src="img/projects/bomberman.webm" alt="Dynamic image Bomberman C++ Java 2D Game" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
-		</div>
 		<div class="project-description">
 			<div class="description-content" Team-size="1" Duration="2 weeks" Skills="C++, Java, SDL, 2D Animation">
-				First real game I did outside my courses that I actually finished. At the time I wanted to make a game I could play with my friends on the school computers,
-				which we eventually did during way to much lunch breaks.<br /><br/>
-				The first version was made using an old 2D java game engine made by previous students. And the second version was made using SDL library in C++ because I wanted to train before applying to Isart Digital Montréal.
-				<br/><br/>
-				Every character can be controlled either by a human or, by an AI. For the AI, I used an A* search algorithm, and it will choose if it goes for the kill or if something more interesting is near.<br/>Obviously, the part where it kills itself was not intended.
-				<br/><img src="img/misc/bomberman_death.png" width="16" height="26" alt="First frame bomberman death"/>
+				First real game I built outside of coursework that I actually finished; and played through far too many lunch breaks.
+				Java version used a student-made engine; the C++ SDL rewrite was warm-up before applying to Isart Digital Montréal.<br/><br/>
+				All characters can be controlled by a human or AI. The AI uses A* pathfinding with aggression/opportunism logic.
+				<img src="img/misc/bomberman_death.png" width="16" height="26" alt="Bomberman death frame" style="vertical-align:middle;margin-left:4px;" loading="lazy"/>
 				<div class="links">
-					<a class="download" id="exe" href="games/Bomberman_C++.zip">Download</a>
+					<a class="download" href="games/Bomberman_C++.zip">Download</a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>ProjectAdventure, Java, 2017</span></div>
-				<img src="img/projects/projectadventure.webp" width="500" height="500" alt="Static image ProjectAdventure Java 2D Game"/>
-				<video class="dynamic" muted loop>
-					<source src="img/projects/projectadventure.webm" alt="Dynamic image ProjectAdventure Java 2D Game" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
 		</div>
 		<div class="project-description">
-			<div class="description-content" Team-size="1" Duration="4 weeks but never finished" Skills="Java, 2D Animation">
-				Alright, this game doesn't really look like an actual game, even though I entirely programmed a shop, an inventory,
-				3 types of enemies, 2 weapons and a combat system, I never really put all the pieces together as I was focused on my studies at the time.
-				But if one project really got me started in game programming, that's the one.
+			<div class="description-content" Team-size="1" Duration="4 weeks (unfinished)" Skills="Java, 2D Animation">
+				The project that started it all. A shop, inventory, 3 enemy types, 2 weapons and a combat system; all built, never shipped. A lesson in scope I've carried ever since.
 				<div class="links">
-					<a class="download" id="jar" href="games/ProjectAdventure.jar">Download</a>
+					<a class="download" href="games/ProjectAdventure.jar">Download</a>
 				</div>
 			</div>
-		</div>
-		
-		<div id="5" class="item">
-			<a class="anim"><div class="item-overlay"><span>Power 4, C++ SDL, 2020<br/>Power 4, C SDL, 2017</span></div>
-				<img src="img/projects/power4.webp" width="500" height="500" alt="Power4 C++ C SDL 2D Game"/>
-			</a>
 		</div>
 		<div class="project-description">
-			<div class="description-content" Team-size="4 (2017) 1 (2020)" Duration="4 days" Skills="C, C++, SDL">
-				Initially a school project to learn SDL with 3 other students, where I was in charge of SDL implementation, win/lose conditions and AI logic.
-				I later decided to remake the game from scratch with all sorts of fixes in the AI in my free time to learn C++.
+			<div class="description-content" Team-size="4 (2017), 1 (2020)" Duration="4 days" Skills="C, C++, SDL">
+				Originally a school SDL project with 3 others. Later fully rebuilt solo in C++; mainly to fix the AI properly.
 				<div class="links">
-					<a target="_blank" class="download" id="source-code" href="https://github.com/AxelIngouf/ConnectFour">Source Code</a>
-					<a class="download" id="exe" href="games/Puissance4Cpp.zip">Download</a>
+					<a target="_blank" class="download source-code" href="https://github.com/AxelIngouf/ConnectFour">Source Code</a>
+					<a class="download" href="games/Puissance4Cpp.zip">Download</a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="item">
-			<a class="anim"><div class="item-overlay"><span>Game of Life, Java, 2017</span></div>
-				<img src="img/projects/gameoflife.webp" width="500" height="500" alt="Static image Game of Life Java 2D Game"/>
-				<video class="dynamic" muted loop>
-					<source src="img/projects/gameoflife.webm" alt="Dynamic image Game of Life Java 2D Game" type="video/webm"/>
-					Your browser doesn't support webm format.
-				</video>
-			</a>
 		</div>
 		<div class="project-description">
 			<div class="description-content" Team-size="1" Duration="2 days" Skills="Java">
-				How could I call myself a programmer if didn't know about the game of life. Well, I went further by programming it, and it might be my first so called game, even though the only gameplay is looking at your screen.
+				Built Conway's Game of Life because it felt like a rite of passage. Possibly my first "game"; if watching emergent patterns counts as gameplay.
 				<div class="links">
-					<a class="download" class="jar" href="games/GameOfLife.jar">Download</a>
+					<a class="download" href="games/GameOfLife.jar">Download</a>
 				</div>
 			</div>
 		</div>
-		<div class="more" style="text-align: center;margin-top: 10px;">
-			And more...
-		</div>
-	</div> 
-</div>
+
+	</div>
+</section>
+
+
+
+<!-- ==================== SIDE PROJECTS ==================== -->
+<section id="experience">
+	<div class="section-header">
+		<h2>Experience</h2>
+	</div>
+	<div class="experience-container">
+		<div id="experience-timeline"></div>
+	</div>
+</section>
 
 <footer>
 	<div class="foot">
-		Contact me:
-		<a href="mailto:axel.ingouf@gmail.com">axel.ingouf@gmail.com</a>
-		<a target="_blank" href="https://github.com/AxelIngouf">GitHub</a> 
-		<a target="_blank" href="https://www.linkedin.com/in/axel-ingouf-666a67167/">LinkedIn</a> 
-		<br/><br/>
-		<div style="text-align: center;">© Made by me</div>
+		<div class="footer-links">
+			<a href="mailto:axel.ingouf@gmail.com">axel.ingouf@gmail.com</a>
+			<a target="_blank" href="https://github.com/AxelIngouf">GitHub</a>
+			<a target="_blank" href="https://www.linkedin.com/in/axel-ingouf-666a67167/">LinkedIn</a>
+		</div>
+		<div class="footer-copy">© Axel Ingouf - Made by me</div>
 	</div>
 </footer>
 
+<script src="js/jquery-3.3.1.min.js" defer></script>
+<script src="js/scripts.js" defer></script>
+
 </body>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/scripts.js"></script>
-
-</html> 
+</html>
