@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Preconnect for font and CSS -->
+	<link rel="preconnect" href="/fonts/ChakraPetch-Light.ttf" crossorigin>
+	<link rel="preload" as="font" href="/fonts/ChakraPetch-Light.ttf" type="font/ttf" crossorigin>
+	<link rel="preload" as="style" href="/css/styles.css">
+
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<title>Axel Ingouf - Senior Gameplay Engineer</title>
 	<link rel="icon" type="image/png" href="img/favicon/icon.ico"/>
-	<link rel="stylesheet" href="css/styles.css"/>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5L44GXB15H"></script>
+	<link rel="stylesheet" href="css/styles.css" media="all" onload="this.media='all'"/>
+	
 	<script>
+		// Defer Google Analytics until user interacts
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-5L44GXB15H');
+		let gtagLoaded = false;
+		function loadGtag() {
+			if (gtagLoaded) return;
+			gtagLoaded = true;
+			var s = document.createElement('script');
+			s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5L44GXB15H';
+			s.async = true;
+			document.head.appendChild(s);
+			gtag('js', new Date());
+			gtag('config', 'G-5L44GXB15H');
+		}
+		['click','scroll','keydown','touchstart'].forEach(function(evt) {
+			window.addEventListener(evt, loadGtag, {once:true,passive:true});
+		});
 	</script>
 </head>
 
@@ -251,24 +269,24 @@
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>CloneEngine · C++ · Vulkan · 2021</span></div>
 					<img src="img/projects/engine.webp" width="500" height="500" alt="Static image 3D Engine Vulkan C++" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/engine.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/engine.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>The Loony Bin · Unreal · 2021</span></div>
 					<img src="img/projects/theloonybin.webp" width="500" height="500" alt="Static image TheLoonyBin Unreal C++ 3D Game" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/theloonybin.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/theloonybin.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>Plush Rush · Unreal · 2021</span></div>
 					<img src="img/projects/plushrush.webp" width="500" height="500" alt="PlushRush Unreal C++ 3D Game" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/plushrush.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/plushrush.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
@@ -280,32 +298,32 @@
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>Animation Programming · C++ · 2020</span></div>
 					<img src="img/projects/animation.png" width="500" height="500" alt="Animation 3D Engine C++" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/animation.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/animation.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>DirectX10 Rendering · C++ · 2020</span></div>
 					<img src="img/projects/directx10.webp" width="500" height="500" alt="DirectX10 Rendering Engine 3D C++" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/directx10.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/directx10.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>Bomberman · C++ SDL · 2020 / Java · 2018</span></div>
 					<img src="img/projects/bomberman.png" width="500" height="500" alt="Static image Bomberman C++ Java 2D Game" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/bomberman.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/bomberman.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>Project Adventure · Java · 2017</span></div>
 					<img src="img/projects/projectadventure.webp" width="500" height="500" alt="Static image ProjectAdventure Java 2D Game" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/projectadventure.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/projectadventure.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
@@ -317,12 +335,15 @@
 			<div class="item">
 				<a class="anim"><div class="item-overlay"><span>Game of Life · Java · 2017</span></div>
 					<img src="img/projects/gameoflife.webp" width="500" height="500" alt="Static image Game of Life Java 2D Game" loading="lazy"/>
-					<video class="dynamic" muted loop>
-						<source src="img/projects/gameoflife.webm" type="video/webm"/>
+					<video class="dynamic" muted loop data-src="img/projects/gameoflife.webm">
+						<source type="video/webm"/>
 					</video>
 				</a>
 			</div>
 		</div>
+
+		<!-- Modal overlay for project popups -->
+		<div class="modal-overlay" style="display:none;"></div>
 
 		<!-- Project descriptions; order must match items-grid order above -->
 		<div class="project-description">
@@ -433,7 +454,7 @@
 	</div>
 </footer>
 
-<script src="js/jquery-3.3.1.min.js" defer></script>
+
 <script src="js/scripts.js" defer></script>
 
 </body>
